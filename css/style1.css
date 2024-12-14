@@ -1,0 +1,254 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Caveat', cursive;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full height to ensure footer stays at the bottom */
+    background-color: #fff9f9;
+}
+
+/* Header */
+.header {
+    background-color: #fbe8f8;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f3cce3;
+}
+
+.header h1 {
+    font-size: 2em;
+    color: #d96fa5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #d96fa5;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #e74c3c;
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    flex: 1; /* Allows the content area to expand and push footer down */
+    height: calc(100vh - 80px); /* Full screen minus header height */
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #ffe6f0;
+    padding: 20px;
+    width: 300px;
+    border-right: 2px solid #f3cce3;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #d96fa5;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fbe8f8;
+    color: #e74c3c;
+}
+
+/* Content */
+.content {
+    flex-grow: 1; /* Ensures content takes up all available space */
+    padding: 20px;
+    overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.content h2 {
+    color: #d96fa5;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #555;
+}
+/*acceueil*/
+.product-section1 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+/* Product Section Layout */
+.product-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Aligns the items to fit in the row */
+}
+
+/* Product Styling */
+.product {
+    background-color: #ffe6f0;
+    border: 2px solid #f3cce3;
+    border-radius: 10px;
+    padding: 15px;
+    width: calc(25% - 20px); /* 4 items per row, taking the gap into account */
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+/* Make product responsive for smaller screens */
+@media (max-width: 1024px) {
+    .product {
+        width: calc(50% - 20px); /* 2 items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(100% - 20px); /* 1 item per row on small screens */
+    }
+}
+
+/* Product Image */
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+/* Product Title */
+.product h4 {
+    color: #d96fa5;
+    margin: 10px 0;
+}
+
+/* Product Description */
+.product p {
+    color: #555;
+}
+
+/* Product Hover Effect */
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add a small box-shadow on default */
+.product {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type:circle;
+    margin-left: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #fbe8f8;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid #f3cce3;
+    margin-top: auto; /* Ensures footer sticks to the bottom */
+}
+
+.footer p {
+    color: #d96fa5;
+    font-size: 1.6em;
+}
+
+/* Welcome Message Container */
+.welcome-message {
+    background-color: #ffe5ec; /* Soft pink background */
+    color: #6b2a4f; /* Deep rose color for text */
+    border: 2px solid #f4c2c2; /* Light pink border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding around the text */
+    text-align: center; /* Center the text */
+    margin: 20px auto; /* Center the box horizontally */
+    width: 80%; /* Adjust the width of the message box */
+    max-width: 600px; /* Limit the maximum width */
+    font-family: 'Caveat', cursive; /* Fancy handwritten font */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Welcome Message Heading */
+.welcome-message h1 {
+    font-size: 2rem; /* Larger font for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Welcome Message Paragraph */
+.welcome-message p {
+    font-size: 1.2rem; /* Slightly smaller font for the paragraph */
+    margin: 0; /* Remove default paragraph margins */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide in from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Natural position */
+    }
+}
+
+/* Fade-Out Animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0); /* Natural position */
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px); /* Move upwards slightly */
+    }
+}
+
+/* Apply the fade-out animation */
+.welcome-message.fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+    pointer-events: none; /* Prevent interaction during fade-out */
+}

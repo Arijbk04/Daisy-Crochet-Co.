@@ -1,0 +1,118 @@
+body {
+    font-family: 'Pacifico', cursive, 'Arial', sans-serif;
+    font-size: larger;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/bg.png") center no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+/* 
+The form-container is a full-screen overlay used to display forms 
+(e.g., login or signup forms) while dimming the background content. 
+It is initially hidden and is displayed when triggered by user actions.
+*/
+.form-container {
+    display: none; /* Hides the form container initially until triggered */
+    position: fixed; /* Keeps the container fixed relative to the viewport */
+    top: 0; /* Aligns the top of the container with the viewport's top edge */
+    left: 0; /* Aligns the left of the container with the viewport's left edge */
+    right: 0; /* Aligns the right of the container with the viewport's right edge */
+    bottom: 0; /* Aligns the bottom of the container with the viewport's bottom edge */
+    background: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent black background for focus effect */
+    justify-content: center; /* Horizontally centers the form inside the container */
+    align-items: center; /* Vertically centers the form inside the container */
+    z-index: 1000; /* Ensures the container is above all other elements */
+}
+
+/* 
+The form-container form styles the actual form displayed inside the overlay. 
+It provides a clean and visually appealing design, ensuring the form is easy to read and interact with.
+*/
+.form-container form {
+    background: white; /* Sets a solid white background for clarity and focus */
+    padding: 40px; /* Adds inner space around the form content */
+    border-radius: 12px; /* Rounds the corners for a modern and smooth appearance */
+    width: 300px; /* Sets the form's width to a comfortable size */
+    text-align:left; /* Aligns the text to the left for better readability */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);/* Adds a shadow to lift the form visually above the background */
+    opacity: 80%; 
+}
+
+label {
+    font-family: 'Caveat';font-size: 22px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    font-size: medium;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #fabba8;
+    outline: none;
+}
+
+button {
+    background-color: #fabba8;
+    color: #FCFFE0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 48%;
+}
+
+button:hover {
+    background-color: #f8b09a;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+form div:last-child {
+    margin-top: 30px; /* Added margin to push the button down further */
+}
+
+
+
